@@ -72,8 +72,8 @@ public class UI {
 
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Logging in");
-				;
-			}
+			
+                        }
 		};
 	}
 }

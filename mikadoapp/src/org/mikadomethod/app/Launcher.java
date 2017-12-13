@@ -13,7 +13,7 @@ import org.mikado.ui.ApplicationException;
  */
 public class Launcher 
 {
-    public static void main(String[] args) {
+    public static void main(String[] argv) {
         try
         {
             /**
@@ -22,7 +22,7 @@ public class Launcher
             
             App.setStorageFile("opt/local/app/db.txt");
             */
-            App.setStorageFile(args[0]); //inicio de al app configurado via parametro command line.
+            App.setStorageFile(argv[0]); //inicio de al app configurado via parametro command line.
             App app = new App();
             app.launch();
         }
