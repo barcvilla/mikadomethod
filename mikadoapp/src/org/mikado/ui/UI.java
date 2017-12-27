@@ -31,9 +31,10 @@ public class UI {
 		database.setStore(App.getStorageFile());
 	}
 
+        // Carga posibles roles y los muestra en el UI
 	public void showLogin() {
 		List<String> users = database.load("users");
-		addLoginSelector(users);
+		addLoginSelector(users);// agrega los users al combo
 		addButtons();
 		frame.setSize(800, 600);
 		frame.setVisible(true);

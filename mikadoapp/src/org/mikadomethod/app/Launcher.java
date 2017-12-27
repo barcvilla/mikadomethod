@@ -22,8 +22,8 @@ public class Launcher
             
             App.setStorageFile("opt/local/app/db.txt");
             */
-            App.setStorageFile(argv[0]); //inicio de al app configurado via parametro command line.
-            App app = new App();
+            App.setStorageFile(argv[0]); //inicio de al app configurado la BD via parametro command line.
+            App app = new App(); // lauch de la app.
             app.launch();
         }
         catch(ApplicationException ex)

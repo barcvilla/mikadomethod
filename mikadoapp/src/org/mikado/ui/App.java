@@ -9,7 +9,8 @@ public class App {
 
 	private UI ui;
 	private static String storePath;
-
+        
+        // crea UI y muestra Login
 	public void launch() throws ApplicationException {
 		ui = new UI();
 		ui.showLogin();
