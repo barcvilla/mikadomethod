@@ -15,21 +15,25 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import org.mikado.db.Database;
 
 import org.mikado.db.FileDB;
 
 
 public class UI {
-
 	
 	private JFrame frame;
 	//private FileDB database;
         private Database database;
-
-	public UI() {
+        
+        // Tomamos un Database en lugar de construir un FileDB
+	public UI(Database database) {
 		frame = new JFrame();
-		database = new FileDB();
-		database.setStore(App.getStorageFile());
+                // figura 2.12 Remove App.getStorageFile()
+	//	database = new FileDB(App.getStorageFile()); // llamamos este nuevo constructor Listing 2.8
+		//database.setStore(App.getStorageFile());
+                // Listing 2.13
+                this.database = database;
 	}
 
         // Carga posibles roles y los muestra en el UI

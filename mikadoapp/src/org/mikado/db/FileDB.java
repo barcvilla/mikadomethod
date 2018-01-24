@@ -18,10 +18,16 @@ import java.util.Map;
  *
  * @author barcvilla
  */
-public class FileDB 
+public class FileDB implements Database
 {
 
 	private File file;
+        
+        // listing 2.7
+        public FileDB(String storageFile)
+        {
+            file = new File(storageFile);
+        }
 
 	public List<String> load(String key) {
 		try {
@@ -44,9 +50,9 @@ public class FileDB
 		}
 	}
 
-
+/** este metodo es eliminado - listing 2.7
 	public void setStore(String storageFile) {
 		file = new File(storageFile);		
 	}
-
+*/
 }
